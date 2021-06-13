@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {View, FlatList} from 'react-native';
-import {useState} from 'react';
-import UseMemoListItem from './UseMemoListItem';
-import UseMemoListItemSeprator from './UseMemoListItemSeprator';
+import {useState, useCallback} from 'react';
+import UseCallbackListItem from './UseCallbackListItem';
+import UseCallBackListItemSeparator from './UseCallBackListItemSeparator';
 import Styles from './Styles';
 
 const technology = [
@@ -20,32 +20,32 @@ const technology = [
   },
 ];
 
-function UseMemoExample() {
+function UseCallBackExample() {
   const [arrTechnology, setArrTechnology] = useState(technology);
-  const onChangeSwitch = (index) => {
+  const onChangeSwitch = useCallback((index) => {
     let array = arrTechnology;
     let object = array[index];
     object.status = !object.status;
     array[index] = object;
     setArrTechnology([...array]);
-  };
+  }, []);
   return (
     <View style={Styles.container}>
       <FlatList
         data={arrTechnology}
         keyExtractor={(item) => String(item.name)}
         renderItem={({item, index}) => (
-          <UseMemoListItem
+          <UseCallbackListItem
             arrTechnology={arrTechnology}
             item={item}
             onChange={() => onChangeSwitch(index)}
           />
         )}
-        ItemSeparatorComponent={() => <UseMemoListItemSeprator />}
+        ItemSeparatorComponent={() => <UseCallBackListItemSeparator />}
         showsVerticalScrollIndicator={false}
         extraData={arrTechnology}
       />
     </View>
   );
 }
-export default UseMemoExample;
+export default UseCallBackExample;

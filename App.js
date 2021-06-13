@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import HooksList from './src';
@@ -7,6 +6,7 @@ import UseStateExample from './src/UseStateExample';
 import UseEffectExample from './src/UseEffectExample';
 import UseRefExample from './src/UseRefExample';
 import UseMemoExample from './src/UseMemoExample';
+import UseCallBackExample from './src/UseCallBackExample';
 
 const Stack = createStackNavigator();
 
@@ -48,6 +48,11 @@ function App() {
           name="UseMemoExample"
           component={UseMemoExample}
           options={{title: 'useMemo'}}
+        />
+        <Stack.Screen
+          name="UseCallBackExample"
+          component={UseCallBackExample}
+          options={{title: 'useCallback'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
