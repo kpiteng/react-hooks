@@ -3,7 +3,7 @@ import {useState, useRef} from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import Styles from './Styles';
 
-function UseStateExample() {
+function UseRefExample() {
   const [strVal, setStrVal] = useState('KPITENG');
   const stringInput = useRef(null);
 
@@ -28,4 +28,4 @@ function UseStateExample() {
     </View>
   );
 }
-export default UseStateExample;
+export default UseRefExample;
