@@ -21,11 +21,7 @@ function UseStateExample() {
         <Text style={Styles.stateValue}>String - {strVal}</Text>
       </View>
       <View style={Styles.accessNumberInputContainer}>
-        <TouchableOpacity
-          onPress={() => {
-            stringInput.current.focus();
-            console.log('stringInput - ', stringInput);
-          }}>
+        <TouchableOpacity onPress={() => stringInput.current.focus()}>
           <Text>Press To Focus Keyboard</Text>
         </TouchableOpacity>
       </View>

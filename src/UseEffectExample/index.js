@@ -18,7 +18,7 @@ function UseEffectExample() {
 
   useEffect(() => {
     console.log(
-      'useEffect with [numValue] will call everytime while numVal changed',
+      'useEffect with [numValue] will call every time while numVal changed',
       numVal,
     );
   }, [numVal]);
