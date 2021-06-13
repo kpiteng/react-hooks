@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HooksList from './src';
 import UseStateExample from './src/UseStateExample';
+import UseEffectExample from './src/UseEffectExample';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,11 @@ function App() {
           name="UseStateExample" 
           component={UseStateExample} 
           options={{ title: 'useState' }}
+        />
+        <Stack.Screen 
+          name="UseEffectExample" 
+          component={UseEffectExample} 
+          options={{ title: 'useEffect' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
