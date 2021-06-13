@@ -17,4 +17,7 @@ export default StyleSheet.create({
   stateValue: {
     marginTop: 5,
   },
+  accessNumberInputContainer: {
+    marginTop: 25,
+  },
 });

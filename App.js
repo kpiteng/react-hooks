@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import {View, Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import HooksList from './src';
 import UseStateExample from './src/UseStateExample';
 import UseEffectExample from './src/UseEffectExample';
+import UseRefExample from './src/UseRefExample';
 
 const Stack = createStackNavigator();
 
@@ -21,22 +22,26 @@ function App() {
             fontWeight: '500',
             fontSize: 19,
           },
-        }}
-      >
-        <Stack.Screen 
-          name="HooksList" 
-          component={HooksList} 
-          options={{ title: 'React Hooks' }}
+        }}>
+        <Stack.Screen
+          name="HooksList"
+          component={HooksList}
+          options={{title: 'React Hooks'}}
         />
-        <Stack.Screen 
-          name="UseStateExample" 
-          component={UseStateExample} 
-          options={{ title: 'useState' }}
+        <Stack.Screen
+          name="UseStateExample"
+          component={UseStateExample}
+          options={{title: 'useState'}}
         />
-        <Stack.Screen 
-          name="UseEffectExample" 
-          component={UseEffectExample} 
-          options={{ title: 'useEffect' }}
+        <Stack.Screen
+          name="UseEffectExample"
+          component={UseEffectExample}
+          options={{title: 'useEffect'}}
+        />
+        <Stack.Screen
+          name="UseRefExample"
+          component={UseRefExample}
+          options={{title: 'useRef'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
