@@ -6,6 +6,7 @@ import HooksList from './src';
 import UseStateExample from './src/UseStateExample';
 import UseEffectExample from './src/UseEffectExample';
 import UseRefExample from './src/UseRefExample';
+import UseMemoExample from './src/UseMemoExample';
 
 const Stack = createStackNavigator();
 
@@ -42,6 +43,11 @@ function App() {
           name="UseRefExample"
           component={UseRefExample}
           options={{title: 'useRef'}}
+        />
+        <Stack.Screen
+          name="UseMemoExample"
+          component={UseMemoExample}
+          options={{title: 'useMemo'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
